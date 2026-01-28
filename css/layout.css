@@ -114,6 +114,28 @@ header .inner h1 {
     opacity: 1;
 }
 
+.sec-1 .gallery .swiper-button-next,
+.sec-1 .gallery .swiper-button-prev {
+    width: 60px;
+    height: 60px;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sec-1 .gallery .swiper-button-next svg,
+.sec-1 .gallery .swiper-button-prev svg {
+    display: none;
+} 
+
+.sec-1 .gallery .swiper-button-next {
+    background-image: url(../img/right.png);
+}
+.sec-1 .gallery .swiper-button-prev {
+    background-image: url(../img/left.png);
+}
+
 .sec-1 .tit-wrap {
     color: #fff;
 }
