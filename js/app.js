@@ -8,6 +8,18 @@ const navList = document.querySelectorAll(".nav-list li");
 
 
 
+var swiper = new Swiper(".gallery", {
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop:true
+});
+
+
 navList.forEach((btn, i) => {
     btn.addEventListener("click", (e) => {
         e.preventDefault()

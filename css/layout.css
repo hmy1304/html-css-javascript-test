@@ -68,11 +68,50 @@ header .inner h1 {
 
 .sec-1 {
     min-height: 100vh;
-    background: url(../img/sec-1bg.png) no-repeat center/cover;
+    /* background-image: url(../img/sec-1bg.png); */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.sec-1 .gallery {
+    height: 100vh;
+    
+}
+
+.sec-1 .gallery .swiper-slide{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sec-1 .swiper-slide.s01 {
+    background-image: url(../img/sec-1bg.png);
+}
+.sec-1 .swiper-slide.s02 {
+    background-image: url(../img/sec-1bg-2.png);
+}
+.sec-1 .swiper-slide.s03 {
+    background-image: url(../img/sec-1bg-3.png);
+}
+
+.sec-1 .gallery .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 5px;
+    opacity: 0.6;
+    transition: width 0.3s;
+}
+
+.sec-1 .gallery .swiper-pagination-bullet-active{
+    width: 60px;
+    opacity: 1;
 }
 
 .sec-1 .tit-wrap {
