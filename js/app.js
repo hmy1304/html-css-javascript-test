@@ -5,6 +5,9 @@ const header = document.querySelector('header');
 const fixedArrow = document.querySelector('.fixed-arrow');
 const mobNavBtn = document.querySelector(".mob-nav-btn");
 const navList = document.querySelectorAll(".nav-list li");
+const contentList = document.querySelectorAll(".sec-5-content-wrap .content")
+const menuList = document.querySelectorAll(".sec-5-content-wrap .menu li")
+let i = 0
 
 
 
@@ -52,3 +55,26 @@ mobNavBtn.addEventListener("click", (e) => {
     e.preventDefault()
     body.classList.toggle("mob-nav-open");
 });
+
+
+
+
+function unit(x) {
+    menuList[x].classList.add("active")
+    contentList[x].classList.add("on")
+}
+
+function reset() {
+    for (let i=0; i<menuList.length; i++){
+        menuList[i].classList.remove("active")
+        contentList[i].classList.remove("on")
+    }
+}
+
+menuList.forEach((menu, index) => {
+    menu.addEventListener("click", (e) => {
+        e.preventDefault()
+        reset()
+        unit(index)
+    })
+})
