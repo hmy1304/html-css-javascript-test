@@ -233,28 +233,117 @@ header .inner h1 {
 .sec-3 {
     display: flex;
     background: #E4E4E4;
+    position: relative;
+   
+    height: 100vh;
 }
 
 .sec-3 .tit-wrap {
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    z-index: 0;
+    
+}
+
+.sec-3 .tit-wrap.t1.active{
+    opacity: 1;
+    background: #674C32;
+}
+.sec-3 .tit-wrap.t2.active{
+    opacity: 1;
+    background: #777461;
+}
+.sec-3 .tit-wrap.t3.active{
+    opacity: 1;
+    background: #DDD4C8;
 }
 
 .sec-3 .tit-wrap a {
     margin-top: 50px;
 }
 
+
+
 .sec-3 .img-wrap {
+    position: absolute;
+    right: 0;
     width: 50%;
-    min-height: 100vh;
-    background: url(../img/sec-3bg.png) no-repeat center/cover;
+    height: 100%;
+}
+
+.sec-3 .img-wrap .slide-sec-3 {
+    width: 100%;
+    height: 100%;
+}
+
+.sec-3 .img-wrap .slide-sec-3 .swiper-slide  {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sec-3 .img-wrap .slide-sec-3 .swiper-slide.s1  {
+    background-image: url(../img/sec-3bg.png);
+}
+.sec-3 .img-wrap .slide-sec-3 .swiper-slide.s2 {
+    background-image: url(../img/sec-3bg2.png);
+}
+.sec-3 .img-wrap .slide-sec-3 .swiper-slide.s3  {
+    background-image: url(../img/sec-3bg3.png);
+}
+
+.sec-3 .img-wrap .slide-sec-3 .swiper-slide.s1 a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+    background: #674C32;
+    text-align: center;
+    border-radius: 999px;
+}
+.sec-3 .img-wrap .slide-sec-3 .swiper-slide.s2 a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+    background: #777461;
+    text-align: center;
+    border-radius: 999px;
+}
+.sec-3 .img-wrap .slide-sec-3 .swiper-slide.s3 a {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 50px;
+    background: #DDD4C8;
+    text-align: center;
+    border-radius: 999px;
+}
+
+.sec-3 .img-wrap .slide-sec-3 .swiper-button-next {
+    /* left: -10%; */
+    z-index: 10;
 }
 
 .sec-4 {
-    /* height: 100vh; */
+    min-height: 100vh;
     padding: 200px 0;
 }
 

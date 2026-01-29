@@ -84,11 +84,11 @@
 
     .sec-3 .tit-wrap {
         width: 100%;
-        min-height: 100vh;
-        background: url(../img/sec-3bg.png) no-repeat center/cover;
+        height: auto;
+        z-index: 10;
     }
 
     .sec-3 .img-wrap{
-        display: none;
+        width: 100%;
     }
 }

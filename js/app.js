@@ -7,6 +7,7 @@ const mobNavBtn = document.querySelector(".mob-nav-btn");
 const navList = document.querySelectorAll(".nav-list li");
 const contentList = document.querySelectorAll(".sec-5-content-wrap .content")
 const menuList = document.querySelectorAll(".sec-5-content-wrap .menu li")
+const titWrap = document.querySelectorAll(".sec-3 .tit-wrap")
 let i = 0
 
 
@@ -21,6 +22,28 @@ var swiper = new Swiper(".gallery", {
     },
     loop:true
 });
+
+var swiper = new Swiper(".slide-sec-3", {
+    loop:true,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    
+    on: {
+        activeIndexChange:function(){
+            const i = this.realIndex
+
+            titWrap.forEach((tit) => {
+                tit.classList.remove("active")
+            })
+            titWrap[i].classList.add("active")
+        }
+    }
+});
+
+
 
 
 navList.forEach((btn, i) => {
